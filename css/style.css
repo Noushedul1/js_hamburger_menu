@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.logo{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+#hamburger{
+	display: none;
+}
+#hamburger:focus{
+	outline: none;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: black;
+	color: white;
+}
+nav #nav-ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+nav ul li a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 20px;
+	color: white;
+}
+
+@media (max-width: 800px){
+	nav #nav-ul{
+		display: none;
+		flex-direction: column;
+		width: 100%;
+	}
+	#nav-ul.show{
+		display: flex;
+	}
+	#hamburger{
+		display: block;
+		cursor: pointer;
+	}
+}
